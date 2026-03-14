@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Argos – Akıllı Güvenlik ve Erişim İzleme Platformu</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="stars" aria-hidden="true" id="stars"></div>
+
+  <header class="header">
+    <div class="header__inner">
+      <a href="/" class="header__brand">
+        <span class="header__logo-frame">
+          <img class="header__logo-img" src="./assets/logo.png.jpeg" alt="Argos" onerror="this.parentElement.style.display='none';" />
+        </span>
+        <span class="header__logo-text">ARGOS</span>
+      </a>
+      <nav class="header__nav">
+        <a href="#ozellikler">Özellikler</a>
+        <a href="#raporlama">Raporlama</a>
+        <a href="#nasil-calisir">Nasıl Çalışır</a>
+        <a href="#oneriler">Öneriler</a>
+        <a href="#iletisim">İletişim</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="hero__badge">Güvenlik Odaklı</p>
+      <h1 class="hero__title">Akıllı Güvenlik ve Erişim İzleme Platformu</h1>
+      <p class="hero__subtitle">Gerçek zamanlı erişim takibi ve güvenlik analizi</p>
+      <p class="hero__lead">
+        Argos, web tabanlı uygulamalarınızda kimin, ne zaman, nereden ve hangi cihazla sisteme girdiğini tek bir merkezden izlemenizi sağlayan bir güvenlik platformudur. Tüm oturumlar, IP değişimleri, cihaz ve tarayıcı bilgileri anlık toplanır; yetkisiz erişim denemeleri, şüpheli girişler ve olağan dışı davranışlar otomatik işaretlenir. Böylece hem günlük güvenlik takibinizi hem de denetim ve uyumluluk (ör. KVKK) gereksinimlerinizi tek çatı altında yönetebilirsiniz.
+      </p>
+      <a href="#ozellikler" class="hero__cta">Özellikleri Keşfet</a>
+    </section>
+
+    <section id="ozellikler" class="features">
+      <h2 class="section-title">Neler Sunuyoruz</h2>
+      <div class="content-block">
+        <h3 class="content-block__heading">Erişim Loglama</h3>
+        <p class="content-block__text">Tüm kullanıcı oturumları, giriş ve çıkış zamanları tek bir merkezde toplanır. Her erişimde aşağıdaki bilgiler kayıt altına alınır:</p>
+        <ul class="content-list">
+          <li>Kullanıcı kimliği ve oturum süresi</li>
+          <li>IP adresi ve (isteğe bağlı) coğrafi konum</li>
+          <li>Cihaz türü, işletim sistemi ve tarayıcı bilgisi</li>
+          <li>Giriş/çıkış zamanları ve oturum süreleri</li>
+        </ul>
+        <p class="content-block__text">Loglar uzun süre saklanarak denetim, KVKK ve diğer uyumluluk ihtiyaçlarına yanıt verilir; gerektiğinde “kim, ne zaman, nereden girdi?” sorusuna net cevap alınır.</p>
+      </div>
+
+      <div class="content-block">
+        <h3 class="content-block__heading">Gerçek Zamanlı İzleme</h3>
+        <p class="content-block__text">Erişimler anlık takip edilir; yeni oturumlar, IP değişimleri ve cihaz değişiklikleri panelde canlı yansır. Kurallara göre anomali ve riskler işaretlenir, şüpheli aktiviteler anında görülebilir. Örneğin:</p>
+        <ul class="content-list">
+          <li>Aynı kullanıcının kısa sürede farklı IP veya cihazlardan girişi</li>
+          <li>Alışılmadık saatlerde veya coğrafyadan erişim</li>
+          <li>Başarısız giriş denemelerinin artışı</li>
+        </ul>
+        <p class="content-block__text">Böylece güvenlik ekipleri müdahale için hızlı karar alabilir.</p>
+      </div>
+
+      <div class="content-block">
+        <h3 class="content-block__heading">Güvenlik Odaklı Analiz</h3>
+        <p class="content-block__text">Yetkisiz erişim denemeleri, başarısız girişler ve olağan dışı giriş desenleri (farklı ülke, cihaz veya saat) otomatik işaretlenir. Toplanan verilerle trend analizi ve raporlama yapılabilir; tehditler erken tespit edilerek önlem alınabilir. İsteğe bağlı olarak belirli olaylar için e-posta veya bildirim tetikleyicileri tanımlanabilir.</p>
+      </div>
+    </section>
+
+    <section id="raporlama" class="reporting">
+      <hr class="section-divider" aria-hidden="true">
+      <h2 class="section-title">Raporlama</h2>
+      <p class="content-text">
+        Argos ile erişim logları, oturum özetleri ve güvenlik uyarıları düzenli raporlar halinde sunulur.
+      </p>
+      <ul class="content-list">
+        <li><strong>Tarih aralığı, kullanıcı ve olay türüne göre filtreleme</strong> ile ihtiyacınıza uygun veriyi seçebilirsiniz.</li>
+        <li>Raporları <strong>PDF</strong> olarak indirip denetim veya arşiv için kullanabilirsiniz.</li>
+        <li>Panel üzerinden <strong>canlı özet ve detaylı listeler</strong> ile günlük takip yapabilirsiniz.</li>
+      </ul>
+      <p class="content-text">
+        Özet ve detaylı raporlar sayesinde yönetim, güvenlik ve uyumluluk (KVKK vb.) süreçlerinizi tek yerden yönetebilirsiniz.
+      </p>
+    </section>
+
+    <section id="nasil-calisir" class="how">
+      <hr class="section-divider" aria-hidden="true">
+      <h2 class="section-title">Nasıl Çalışır</h2>
+      <p class="content-text">
+        Argos, mevcut web uygulamanıza entegre edilerek çalışır. Entegrasyon sonrası tüm erişim verileri merkezi panelde toplanır.
+      </p>
+      <ol class="content-list content-list--numbered">
+        <li><strong>Entegrasyon:</strong> Web uygulamanızın giriş/oturum noktalarına Argos izleme kodu eklenir (API veya hazır kütüphane ile).</li>
+        <li><strong>Veri toplama:</strong> Her giriş, çıkış ve (isteğe bağlı) sayfa/olay bilgisi güvenli şekilde Argos sunucusuna iletilir.</li>
+        <li><strong>İzleme ve uyarı:</strong> Panelden canlı veriyi görür, kurallara göre uyarı alır ve raporları inceleyebilirsiniz.</li>
+      </ol>
+      <p class="content-text">
+        Şüpheli aktiviteler raporlanır; gerekirse e-posta veya bildirim ile anında uyarı üretilir.
+      </p>
+    </section>
+
+    <section id="oneriler" class="suggestions">
+      <hr class="section-divider" aria-hidden="true">
+      <h2 class="section-title">Platformla Neler Yapabilirsiniz?</h2>
+      <p class="content-text content-intro">
+        Argos ile uyumlu, ihtiyacınıza göre kullanılabilecek bazı öneriler:
+      </p>
+      <ul class="suggestion-list">
+        <li><strong>Uyarı eşikleri:</strong> Belirli sayıda başarısız girişte veya aynı kullanıcının farklı ülkelerden kısa sürede girişinde otomatik uyarı.</li>
+        <li><strong>KVKK / uyumluluk:</strong> Erişim logları ile “erişim kayıtları” tutma gereksinimlerine destek.</li>
+        <li><strong>Çoklu oturum tespiti:</strong> Aynı hesabın aynı anda birden fazla cihazdan kullanımını izleme ve gerekirse sınırlama.</li>
+        <li><strong>Coğrafi filtreleme:</strong> Sadece belirli ülke/bölgelerden erişime izin verme veya riskli bölgeleri işaretleme.</li>
+        <li><strong>Zaman dilimi analizi:</strong> Alışılmadık saatlerde girişleri tespit etme (ör. gece vardiyası dışında erişim).</li>
+        <li><strong>Dashboard özelleştirme:</strong> Özet sayfada en önemli metrikleri (aktif oturum, son girişler, uyarı sayısı vb.) tek bakışta görme.</li>
+      </ul>
+      <p class="content-text">
+        Bu özelliklerin hangilerinin projenizde kullanılacağı, ihtiyaç ve entegrasyon tipine göre birlikte belirlenebilir.
+      </p>
+    </section>
+
+    <footer id="iletisim" class="footer">
+      <hr class="section-divider section-divider--footer" aria-hidden="true">
+      <div class="footer__inner">
+        <p class="footer__brand">Argos</p>
+        <p class="footer__tagline">Akıllı Güvenlik ve Erişim İzleme Platformu</p>
+        <div class="footer__contact">
+          <a href="mailto:defceylan2000@gmail.com" class="footer__link">defceylan2000@gmail.com</a>
+          <a href="tel:+905391088034" class="footer__link">539 108 80 34</a>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var container = document.getElementById('stars');
+      if (!container) return;
+
+      for (var i = 0; i < 50; i++) {
+        var s = document.createElement('span');
+        s.className = 'star star--' + (Math.random() > 0.5 ? 's' : 'm');
+        s.style.left = (Math.random() * 100).toFixed(2) + '%';
+        s.style.top = (Math.random() * 100).toFixed(2) + '%';
+        s.style.animationDelay = (Math.random() * 4).toFixed(2) + 's';
+        s.style.animationDuration = (2 + Math.random() * 2).toFixed(2) + 's';
+        s.style.setProperty('--star-r', (Math.random() * 360) + 'deg');
+        container.appendChild(s);
+      }
+
+      var mouseX = 0.5, mouseY = 0.5;
+      var currentX = 0.5, currentY = 0.5;
+
+      document.addEventListener('mousemove', function(e) {
+        mouseX = e.clientX / window.innerWidth;
+        mouseY = e.clientY / window.innerHeight;
+      });
+
+      function update() {
+        currentX += (mouseX - currentX) * 0.06;
+        currentY += (mouseY - currentY) * 0.06;
+        var dx = (currentX - 0.5) * 40;
+        var dy = (currentY - 0.5) * 40;
+        container.style.transform = 'translate(' + dx + 'px, ' + dy + 'px)';
+        requestAnimationFrame(update);
+      }
+      update();
+    });
+  </script>
+</body>
+</html>

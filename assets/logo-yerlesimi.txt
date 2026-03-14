@@ -1,0 +1,2 @@
+Logoyu bu klasöre "logo.png" adıyla kaydedin.
+Header'da otomatik görünecektir.
