@@ -3,11 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Argos – Web uygulamalarınızda gerçek zamanlı erişim takibi, güvenlik analizi, loglama ve KVKK uyumlu raporlama.">
   <title>Argos – Akıllı Güvenlik ve Erişim İzleme Platformu</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>html { scroll-behavior: smooth; }</style>
 </head>
 <body>
   <div class="stars" aria-hidden="true" id="stars"></div>
@@ -16,16 +18,22 @@
     <div class="header__inner">
       <a href="/" class="header__brand">
         <span class="header__logo-frame">
-          <img class="header__logo-img" src="./assets/logo.png.jpeg" alt="Argos" onerror="this.parentElement.style.display='none';" />
+          <img class="header__logo-img" src="./assets/logo.png.jpeg" alt="Argos" width="56" height="56" decoding="async" fetchpriority="high" onerror="this.parentElement.style.display='none';" />
         </span>
         <span class="header__logo-text">ARGOS</span>
       </a>
-      <nav class="header__nav">
+      <button type="button" class="header__menu-btn" aria-label="Menüyü aç" aria-expanded="false" id="menuBtn">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="header__nav" id="headerNav">
         <a href="#ozellikler">Özellikler</a>
+        <a href="#neden-argos">Neden Argos</a>
         <a href="#raporlama">Raporlama</a>
         <a href="#nasil-calisir">Nasıl Çalışır</a>
         <a href="#oneriler">Öneriler</a>
+        <a href="#sss">SSS</a>
         <a href="#iletisim">İletişim</a>
+        <a href="#iletisim" class="header__cta">Demo Al</a>
       </nav>
     </div>
   </header>
@@ -38,13 +46,72 @@
       <p class="hero__lead">
         Argos, web tabanlı uygulamalarınızda kimin, ne zaman, nereden ve hangi cihazla sisteme girdiğini tek bir merkezden izlemenizi sağlayan bir güvenlik platformudur. Tüm oturumlar, IP değişimleri, cihaz ve tarayıcı bilgileri anlık toplanır; yetkisiz erişim denemeleri, şüpheli girişler ve olağan dışı davranışlar otomatik işaretlenir. Böylece hem günlük güvenlik takibinizi hem de denetim ve uyumluluk (ör. KVKK) gereksinimlerinizi tek çatı altında yönetebilirsiniz.
       </p>
-      <a href="#ozellikler" class="hero__cta">Özellikleri Keşfet</a>
+      <div class="hero__ctas">
+        <a href="#ozellikler" class="hero__cta">Özellikleri Keşfet</a>
+        <a href="#iletisim" class="hero__cta hero__cta--secondary">Demo Al</a>
+      </div>
+      <div class="hero__badges" aria-hidden="true">
+        <span class="hero__trust">KVKK uyumlu</span>
+        <span class="hero__trust">Şifreli veri</span>
+        <span class="hero__trust">Türkiye sunucuları</span>
+      </div>
+    </section>
+
+    <section class="stats animate-on-scroll">
+      <div class="stats__grid">
+        <div class="stats__item">
+          <span class="stats__value">Gerçek zamanlı</span>
+          <span class="stats__label">Anlık erişim takibi</span>
+        </div>
+        <div class="stats__item">
+          <span class="stats__value">KVKK</span>
+          <span class="stats__label">Uyumlu loglama</span>
+        </div>
+        <div class="stats__item">
+          <span class="stats__value">7/24</span>
+          <span class="stats__label">İzleme ve uyarı</span>
+        </div>
+        <div class="stats__item">
+          <span class="stats__value">Tek panel</span>
+          <span class="stats__label">Tüm veriler bir arada</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="neden-argos" class="why-argos animate-on-scroll">
+      <h2 class="section-title">Neden Argos?</h2>
+      <p class="content-text content-intro">Tek bir platformla güvenlik ve uyumluluğu bir arada yönetin.</p>
+      <div class="why-argos__grid">
+        <div class="why-argos__item">
+          <span class="why-argos__num">01</span>
+          <h3 class="why-argos__title">Hızlı entegrasyon</h3>
+          <p class="why-argos__text">Mevcut uygulamanıza birkaç satır kod ile entegre edin; günler süren kurulum yok.</p>
+        </div>
+        <div class="why-argos__item">
+          <span class="why-argos__num">02</span>
+          <h3 class="why-argos__title">Tek panel, tüm veriler</h3>
+          <p class="why-argos__text">Erişim logları, uyarılar ve raporlar tek bir merkezden; dağınık sistemlere son.</p>
+        </div>
+        <div class="why-argos__item">
+          <span class="why-argos__num">03</span>
+          <h3 class="why-argos__title">Uyumluluk odaklı</h3>
+          <p class="why-argos__text">KVKK ve denetim gereksinimlerine uygun loglama ile raporlama hazır.</p>
+        </div>
+        <div class="why-argos__item">
+          <span class="why-argos__num">04</span>
+          <h3 class="why-argos__title">Proaktif güvenlik</h3>
+          <p class="why-argos__text">Şüpheli aktiviteler otomatik işaretlenir; tepki vermek için geç kalmazsınız.</p>
+        </div>
+      </div>
     </section>
 
     <section id="ozellikler" class="features">
-      <h2 class="section-title">Neler Sunuyoruz</h2>
-      <div class="content-block">
-        <h3 class="content-block__heading">Erişim Loglama</h3>
+      <h2 class="section-title animate-on-scroll">Neler Sunuyoruz</h2>
+      <div class="content-block animate-on-scroll">
+        <h3 class="content-block__heading">
+          <span class="icon icon--log" aria-hidden="true"></span>
+          Erişim Loglama
+        </h3>
         <p class="content-block__text">Tüm kullanıcı oturumları, giriş ve çıkış zamanları tek bir merkezde toplanır. Her erişimde aşağıdaki bilgiler kayıt altına alınır:</p>
         <ul class="content-list">
           <li>Kullanıcı kimliği ve oturum süresi</li>
@@ -55,9 +122,16 @@
         <p class="content-block__text">Loglar uzun süre saklanarak denetim, KVKK ve diğer uyumluluk ihtiyaçlarına yanıt verilir; gerektiğinde “kim, ne zaman, nereden girdi?” sorusuna net cevap alınır.</p>
       </div>
 
-      <div class="content-block">
-        <h3 class="content-block__heading">Gerçek Zamanlı İzleme</h3>
+      <div class="content-block animate-on-scroll">
+        <h3 class="content-block__heading">
+          <span class="icon icon--monitor" aria-hidden="true"></span>
+          Gerçek Zamanlı İzleme
+        </h3>
         <p class="content-block__text">Erişimler anlık takip edilir; yeni oturumlar, IP değişimleri ve cihaz değişiklikleri panelde canlı yansır. Kurallara göre anomali ve riskler işaretlenir, şüpheli aktiviteler anında görülebilir. Örneğin:</p>
+        <div class="live-log-preview" aria-hidden="true">
+          <div class="live-log-preview__title">Canlı log önizlemesi</div>
+          <div class="live-log-preview__lines" id="liveLogLines"></div>
+        </div>
         <ul class="content-list">
           <li>Aynı kullanıcının kısa sürede farklı IP veya cihazlardan girişi</li>
           <li>Alışılmadık saatlerde veya coğrafyadan erişim</li>
@@ -66,15 +140,45 @@
         <p class="content-block__text">Böylece güvenlik ekipleri müdahale için hızlı karar alabilir.</p>
       </div>
 
-      <div class="content-block">
-        <h3 class="content-block__heading">Güvenlik Odaklı Analiz</h3>
+      <div class="content-block animate-on-scroll">
+        <h3 class="content-block__heading">
+          <span class="icon icon--shield" aria-hidden="true"></span>
+          Güvenlik Odaklı Analiz
+        </h3>
         <p class="content-block__text">Yetkisiz erişim denemeleri, başarısız girişler ve olağan dışı giriş desenleri (farklı ülke, cihaz veya saat) otomatik işaretlenir. Toplanan verilerle trend analizi ve raporlama yapılabilir; tehditler erken tespit edilerek önlem alınabilir. İsteğe bağlı olarak belirli olaylar için e-posta veya bildirim tetikleyicileri tanımlanabilir.</p>
+      </div>
+    </section>
+
+    <section class="sectors animate-on-scroll">
+      <h2 class="section-title">Kimler Kullanır?</h2>
+      <p class="content-text content-intro">Argos, farklı sektör ve kullanım senaryolarına uyum sağlar:</p>
+      <div class="sectors__grid">
+        <div class="sector-card">
+          <span class="sector-card__icon" aria-hidden="true">🛒</span>
+          <h3 class="sector-card__title">E-ticaret</h3>
+          <p class="sector-card__text">Müşteri oturumları, admin paneli ve ödeme güvenliği takibi.</p>
+        </div>
+        <div class="sector-card">
+          <span class="sector-card__icon" aria-hidden="true">☁️</span>
+          <h3 class="sector-card__title">SaaS</h3>
+          <p class="sector-card__text">Abonelik ve kullanıcı erişim logları, çoklu kiracı izleme.</p>
+        </div>
+        <div class="sector-card">
+          <span class="sector-card__icon" aria-hidden="true">🏢</span>
+          <h3 class="sector-card__title">Kurumsal</h3>
+          <p class="sector-card__text">Çalışan erişimleri, dahili uygulamalar ve denetim raporları.</p>
+        </div>
+        <div class="sector-card">
+          <span class="sector-card__icon" aria-hidden="true">💳</span>
+          <h3 class="sector-card__title">Fintech</h3>
+          <p class="sector-card__text">Yüksek güvenlik ve uyumluluk ihtiyaçları için detaylı loglama.</p>
+        </div>
       </div>
     </section>
 
     <section id="raporlama" class="reporting">
       <hr class="section-divider" aria-hidden="true">
-      <h2 class="section-title">Raporlama</h2>
+      <h2 class="section-title animate-on-scroll">Raporlama</h2>
       <p class="content-text">
         Argos ile erişim logları, oturum özetleri ve güvenlik uyarıları düzenli raporlar halinde sunulur.
       </p>
@@ -123,25 +227,82 @@
       </p>
     </section>
 
+    <section id="sss" class="faq">
+      <hr class="section-divider" aria-hidden="true">
+      <h2 class="section-title animate-on-scroll">Sıkça Sorulan Sorular</h2>
+      <div class="faq__list">
+        <div class="faq__item">
+          <button type="button" class="faq__question" aria-expanded="false" aria-controls="faq-a1" id="faq-q1">Veriler nerede tutuluyor?</button>
+          <div class="faq__answer" id="faq-a1" role="region" aria-labelledby="faq-q1">
+            <p>Erişim logları ve analiz verileri Türkiye’deki sunucularda, şifreli ve güvenli şekilde saklanır. Veri işleme süreçleri KVKK ile uyumlu yürütülür.</p>
+          </div>
+        </div>
+        <div class="faq__item">
+          <button type="button" class="faq__question" aria-expanded="false" aria-controls="faq-a2" id="faq-q2">Entegrasyon ne kadar sürer?</button>
+          <div class="faq__answer" id="faq-a2" role="region" aria-labelledby="faq-q2">
+            <p>Standart web uygulamalarında API veya hazır kütüphane ile entegrasyon genellikle birkaç saat ile bir gün arasında tamamlanır. Proje büyüklüğüne göre süre değişebilir.</p>
+          </div>
+        </div>
+        <div class="faq__item">
+          <button type="button" class="faq__question" aria-expanded="false" aria-controls="faq-a3" id="faq-q3">KVKK’ya uyumlu mu?</button>
+          <div class="faq__answer" id="faq-a3" role="region" aria-labelledby="faq-q3">
+            <p>Evet. Argos, erişim kayıtlarının tutulması ve saklanması konusunda KVKK ve ilgili mevzuata uyumlu çalışacak şekilde tasarlanmıştır. Veri saklama süreleri ve erişim politikaları ihtiyacınıza göre yapılandırılabilir.</p>
+          </div>
+        </div>
+        <div class="faq__item">
+          <button type="button" class="faq__question" aria-expanded="false" aria-controls="faq-a4" id="faq-q4">Mevcut sistemimle uyumlu mu?</button>
+          <div class="faq__answer" id="faq-a4" role="region" aria-labelledby="faq-q4">
+            <p>REST API ve JavaScript SDK ile çoğu web teknolojisiyle (React, Vue, Angular, PHP, .NET vb.) entegre edilebilir. Teknik gereksinimleriniz için bizimle iletişime geçebilirsiniz.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <footer id="iletisim" class="footer">
       <hr class="section-divider section-divider--footer" aria-hidden="true">
       <div class="footer__inner">
         <p class="footer__brand">Argos</p>
         <p class="footer__tagline">Akıllı Güvenlik ve Erişim İzleme Platformu</p>
+        <form class="footer__form" id="contactForm" novalidate>
+          <div class="footer__form-row">
+            <label for="contact-name" class="footer__label">Adınız</label>
+            <input type="text" id="contact-name" class="footer__input" placeholder="Adınız Soyadınız" required>
+          </div>
+          <div class="footer__form-row">
+            <label for="contact-email" class="footer__label">E-posta</label>
+            <input type="email" id="contact-email" class="footer__input" placeholder="ornek@firma.com" required>
+          </div>
+          <div class="footer__form-row">
+            <label for="contact-msg" class="footer__label">Mesajınız</label>
+            <textarea id="contact-msg" class="footer__textarea" placeholder="Demo talebi veya sorularınız..." rows="4"></textarea>
+          </div>
+          <button type="submit" class="footer__submit">Gönder</button>
+        </form>
         <div class="footer__contact">
           <a href="mailto:defceylan2000@gmail.com" class="footer__link">defceylan2000@gmail.com</a>
           <a href="tel:+905391088034" class="footer__link">539 108 80 34</a>
         </div>
       </div>
     </footer>
+
+    <button type="button" class="back-to-top" id="backToTop" aria-label="Yukarı çık" title="Yukarı çık">↑</button>
+
+    <div class="cookie-bar" id="cookieBar" role="dialog" aria-label="Çerez ve KVKK bilgilendirmesi">
+      <div class="cookie-bar__inner">
+        <p class="cookie-bar__text">
+          Bu sitede deneyiminizi iyileştirmek ve KVKK kapsamında bilgilendirmek için çerezler kullanıyoruz. Sitemizi kullanmaya devam ederek çerez kullanımını kabul etmiş olursunuz.
+        </p>
+        <button type="button" class="cookie-bar__btn" id="cookieAccept">Kabul ediyorum</button>
+      </div>
+    </div>
   </main>
 
-  <script>
+  <script defer>
     document.addEventListener('DOMContentLoaded', function() {
       var container = document.getElementById('stars');
       if (!container) return;
 
-      for (var i = 0; i < 50; i++) {
+      for (var i = 0; i < 35; i++) {
         var s = document.createElement('span');
         s.className = 'star star--' + (Math.random() > 0.5 ? 's' : 'm');
         s.style.left = (Math.random() * 100).toFixed(2) + '%';
@@ -169,6 +330,118 @@
         requestAnimationFrame(update);
       }
       update();
+
+      var menuBtn = document.getElementById('menuBtn');
+      var headerNav = document.getElementById('headerNav');
+      if (menuBtn && headerNav) {
+        menuBtn.addEventListener('click', function() {
+          var open = headerNav.classList.toggle('header__nav--open');
+          menuBtn.setAttribute('aria-expanded', open);
+        });
+        headerNav.querySelectorAll('a').forEach(function(a) {
+          a.addEventListener('click', function() {
+            headerNav.classList.remove('header__nav--open');
+            menuBtn.setAttribute('aria-expanded', 'false');
+          });
+        });
+      }
+
+      // SSS accordion
+      document.querySelectorAll('.faq__question').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          var expanded = this.getAttribute('aria-expanded') === 'true';
+          document.querySelectorAll('.faq__question').forEach(function(b) { b.setAttribute('aria-expanded', 'false'); });
+          document.querySelectorAll('.faq__item').forEach(function(i) { i.classList.remove('faq__item--open'); });
+          if (!expanded) {
+            this.setAttribute('aria-expanded', 'true');
+            this.closest('.faq__item').classList.add('faq__item--open');
+          }
+        });
+      });
+
+      // Canlı log önizlemesi
+      var logLines = [
+        { time: '14:32:01', ip: '88.247.12.45', user: 'kullanici@firma.com', event: 'Giriş başarılı' },
+        { time: '14:31:58', ip: '195.142.70.22', user: 'admin@firma.com', event: 'Panel erişimi' },
+        { time: '14:31:42', ip: '78.165.98.12', user: 'destek@firma.com', event: 'Çıkış' },
+        { time: '14:31:15', ip: '88.247.12.45', user: 'kullanici@firma.com', event: 'Şüpheli: farklı cihaz' }
+      ];
+      var logContainer = document.getElementById('liveLogLines');
+      if (logContainer) {
+        function renderLogs() {
+          if (document.hidden) return;
+          var idx = Math.floor(Math.random() * logLines.length);
+          var l = logLines[idx];
+          var line = '<div class="live-log-preview__line">[' + l.time + '] ' + l.ip + ' – ' + l.user + ' – ' + l.event + '</div>';
+          logContainer.insertAdjacentHTML('afterbegin', line);
+          while (logContainer.children.length > 4) logContainer.removeChild(logContainer.lastChild);
+        }
+        renderLogs();
+        var logInterval;
+        function startLogInterval() {
+          if (logInterval) clearInterval(logInterval);
+          logInterval = setInterval(renderLogs, 2500);
+        }
+        function stopLogInterval() {
+          if (logInterval) { clearInterval(logInterval); logInterval = null; }
+        }
+        startLogInterval();
+        document.addEventListener('visibilitychange', function() {
+          document.hidden ? stopLogInterval() : startLogInterval();
+        });
+      }
+
+      // Scroll animasyonları – bir kez görününce observe’u bırak (performans)
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(e) {
+          if (e.isIntersecting) {
+            e.target.classList.add('animate-visible');
+            observer.unobserve(e.target);
+          }
+        });
+      }, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
+      document.querySelectorAll('.animate-on-scroll').forEach(function(el) { observer.observe(el); });
+
+      // İletişim formu – mailto
+      var form = document.getElementById('contactForm');
+      if (form) {
+        form.addEventListener('submit', function(e) {
+          e.preventDefault();
+          var name = document.getElementById('contact-name').value;
+          var email = document.getElementById('contact-email').value;
+          var msg = document.getElementById('contact-msg').value;
+          var body = 'Ad: ' + encodeURIComponent(name) + '%0D%0AE-posta: ' + encodeURIComponent(email) + '%0D%0A%0D%0AMesaj: ' + encodeURIComponent(msg);
+          window.location.href = 'mailto:defceylan2000@gmail.com?subject=Argos%20-%20%C4%B0leti%C5%9Fim%20/%20Demo%20Talebi&body=' + body;
+        });
+      }
+
+      // Yukarı çık butonu
+      var backToTop = document.getElementById('backToTop');
+      if (backToTop) {
+        function toggleBackToTop() {
+          backToTop.classList.toggle('back-to-top--visible', window.scrollY > 400);
+        }
+        window.addEventListener('scroll', toggleBackToTop, { passive: true });
+        toggleBackToTop();
+        backToTop.addEventListener('click', function() {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+      }
+
+      // KVKK / Çerez çubuğu
+      var cookieBar = document.getElementById('cookieBar');
+      var cookieAccept = document.getElementById('cookieAccept');
+      if (cookieBar && cookieAccept) {
+        try {
+          if (!localStorage.getItem('argos-cookie-accepted')) {
+            cookieBar.classList.add('cookie-bar--visible');
+          }
+        } catch (e) {}
+        cookieAccept.addEventListener('click', function() {
+          try { localStorage.setItem('argos-cookie-accepted', '1'); } catch (e) {}
+          cookieBar.classList.remove('cookie-bar--visible');
+        });
+      }
     });
   </script>
 </body>
